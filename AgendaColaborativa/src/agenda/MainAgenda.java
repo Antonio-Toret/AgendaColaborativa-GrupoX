@@ -21,9 +21,7 @@ public class MainAgenda {
 
         // Mostrar todos los contactos
         System.out.println("\n--- Lista de contactos ---");
-        for (Contacto c : agenda.getContactos()) {
-            System.out.println(c);
-        }
+        agenda.listarContactos();
 
         // Buscar un contacto existente
         System.out.println("\n--- Buscar contacto ---");
@@ -57,6 +55,6 @@ public class MainAgenda {
             System.out.println(c);
         }
         
-        agenda.listarContactos();
+        
     }
 }
