@@ -56,5 +56,7 @@ public class MainAgenda {
         for (Contacto c : agenda.getContactos()) {
             System.out.println(c);
         }
+        
+        agenda.listarContactos();
     }
 }
