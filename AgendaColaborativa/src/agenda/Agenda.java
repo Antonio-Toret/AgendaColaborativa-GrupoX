@@ -5,12 +5,15 @@ import java.util.List;
 
 public class Agenda {
 
+    // Lista de contactos
     private List<Contacto> contactos;
 
+    // Constructor
     public Agenda() {
         contactos = new ArrayList<>();
     }
 
+    // Getters y setters
     public List<Contacto> getContactos() {
         return contactos;
     }
@@ -19,10 +22,7 @@ public class Agenda {
         this.contactos = contactos;
     }
 
-    public void agregarContacto(Contacto c) {
-        contactos.add(c);
-    }
-
+    // Busca un contacto por nombre
     public Contacto buscarContacto(String nombre) {
         for (Contacto c : contactos) {
             if (c.getNombre().equalsIgnoreCase(nombre)) {
@@ -32,6 +32,7 @@ public class Agenda {
         return null;
     }
 
+    // Elimina un contacto por nombre
     public boolean eliminarContacto(String nombre) {
         Contacto contacto = buscarContacto(nombre);
         if (contacto != null) {
@@ -39,11 +40,5 @@ public class Agenda {
             return true;
         }
         return false;
-    }
-
-    public void listarContactos() {
-        for (Contacto c : contactos) {
-            System.out.println(c);
-        }
     }
 }
